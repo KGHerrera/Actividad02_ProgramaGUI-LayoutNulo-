@@ -45,7 +45,7 @@ class VentanaInicio extends JFrame{
 		radioOnly.setBounds(10, 210, 250, 20);
 		radioAll.setBounds(10, 230, 250, 20);
 		
-		JLabel txtEdit = new JLabel("(edit requiered fields in the form builder)");
+		JLabel txtEdit = new JLabel("<html><body>(edit requiered fields <b style=\"color:#00AAE4\";>in the form builder</b>)</body></html>");
 		txtEdit.setBounds(20, 250, 250, 20);
 		txtEdit.setFont(new Font("Calibri", Font.PLAIN, 11));
 		
@@ -75,8 +75,9 @@ class VentanaInicio extends JFrame{
 		JCheckBox checkInclude = new JCheckBox("include archive link");
 		checkInclude.setBounds(10, 500, 250, 20);
 		
-		JCheckBox checkMonkey = new JCheckBox("include MonkeyRewards link");
-		checkMonkey.setBounds(10, 525, 250, 20);
+		JCheckBox checkMonkey = new JCheckBox("<html><body> include <b style=\"color:#00AAE4\";> MonkeyRewards link </p></body></html>");
+		checkMonkey.setBounds(10, 525, 350, 40);
+		
 		
 		panel1.add(checkEnable);
 		panel1.add(checkDisable);
@@ -119,7 +120,7 @@ class VentanaInicio extends JFrame{
 		txtEmail.setBounds(20, 20, 200, 25);
 		txtEmail.setFont(new Font("Calibri", Font.PLAIN, 16));
 		
-		JTextField cajaEmail = new JTextField(8);
+		JFormattedTextField cajaEmail = new JFormattedTextField();
 		cajaEmail.setBounds(20, 40, 500, 35);
 		
 		JLabel txtFirst = new JLabel("First Name");
@@ -137,11 +138,15 @@ class VentanaInicio extends JFrame{
 		cajaLast.setBounds(20, 180, 500, 35);
 		
 		JButton botonSus = new JButton("Suscribe");
-		botonSus.setBounds(20, 230, 100, 30);
+		botonSus.setBounds(20, 230, 125, 35);
 		
-		botonSus.setBackground(new Color(100,100,100));
+		ImageIcon iconobtn = new ImageIcon("src/Icon/i1.png");
+		botonSus.setBackground(new Color(150,150,150));
 		botonSus.setForeground(Color.white);
 		botonSus.setFont(new Font("Calibri", Font.PLAIN, 18));
+		botonSus.setBorder(null);
+		
+		botonSus.setIcon(iconobtn);
 		
 		JLabel txtReq = new JLabel("* indicates required");
 		txtReq.setBounds(400, 10, 200, 25);
