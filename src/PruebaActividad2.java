@@ -70,15 +70,29 @@ class VentanaInicio extends JFrame{
 		checkEnable.setBounds(10, 450, 250, 20);
 		
 		JCheckBox checkDisable = new JCheckBox("disable all JavaScript");
-		checkDisable.setBounds(10, 475, 250, 20);
+		checkDisable.setBounds(10, 475, 150, 20);
 		
 		JCheckBox checkInclude = new JCheckBox("include archive link");
-		checkInclude.setBounds(10, 500, 250, 20);
+		checkInclude.setBounds(10, 500, 140, 20);
 		
 		JCheckBox checkMonkey = new JCheckBox("<html><body> include <b style=\"color:#00AAE4\";> MonkeyRewards link </p></body></html>");
-		checkMonkey.setBounds(10, 525, 350, 40);
+		checkMonkey.setBounds(10, 525, 350, 20);
+		
+		ImageIcon iconInfo = new ImageIcon("src/Icon/i2.png");
+		JLabel txtInfo = new JLabel("info");
+		txtInfo.setIcon(iconInfo);
+		txtInfo.setBounds(160, 475, 70, 20);
 		
 		
+		
+		JLabel txtInfo2 = new JLabel("info");
+		txtInfo2.setIcon(iconInfo);
+		txtInfo2.setBounds(150, 500, 70, 20);
+		
+		panel1.add(txtInfo);
+		panel1.add(txtInfo2);
+		
+		panel1.add(txtInfo);
 		panel1.add(checkEnable);
 		panel1.add(checkDisable);
 		panel1.add(checkInclude);
@@ -198,6 +212,8 @@ class VentanaInicio extends JFrame{
 		JScrollPane scroll = new JScrollPane(areaCodigo);
 		scroll.setBounds(320, 410, 580, 170);	
 		scroll.setBorder(BorderFactory.createLineBorder(new Color(180,180,180)));
+		
+		
 		
 		add(scroll);
 		
